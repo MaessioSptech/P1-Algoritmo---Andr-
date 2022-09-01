@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 16</title>
+</head>
+<body>
+
+    <p>A passagem está R$4,40. Escolha sua opçao?</p>
+    <button onclick="passagens_8()">08 passagens</button>
+    <button onclick="passagens_20()">20 passagens</button>
+    <button onclick="passagens_50()">50 passagens</button>    
+    <div id="valores_recebidos_passagens">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+    function passagens_8() {
+        valores_recebidos_passagens.innerHTML = `
+        Ao comprar 08 passagens, você pagou ${(4.06/4.40-1)*100}% a menos.
+         É como se tivesse ganhado ${35.20/32.45} passagens de bônus
+        `
+    }
+
+    function passagens_20() {
+        valores_recebidos_passagens.innerHTML =`
+        Ao comprar 20 passagens, você pagou ${(3.93/4.40-1)*100}% a menos. 
+        É como se tivesse ganhado ${88/78.65} passagens de bônus
+        `
+    }
+
+    function passagens_50() {
+        valores_recebidos_passagens.innerHTML =`
+        Ao comprar 50 passagens, você pagou ${(3.83/4.40-1)*100}% a menos. 
+        É como se tivesse ganhado ${220/191.41} passagens de bônus
+        `        
+    }
+</script>

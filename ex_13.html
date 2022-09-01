@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+</head>
+<body>
+    <p> Informe um número :
+        <input type="number" id="input_numero_base">
+    </p>
+    <p> Informe um número ordinal (ª):
+        <input type="number" id="input_numero_ordinal">
+    </p>
+    <button onclick="calcular_raiz()">Calcular raiz</button>
+
+    <div id="div_resposta_raiz"></div>
+
+
+</body>
+</html>
+
+<script>
+    function calcular_raiz() {
+
+        var estrutura_raiz = Number(input_numero_base.value) ** 
+        (1/ Number(input_numero_ordinal.value))
+
+        div_resposta_raiz.innerHTML = `A ${Number(input_numero_ordinal.value)}ª raiz 
+        de ${Number(input_numero_base.value)} 
+        dá ${estrutura_raiz}
+        
+        `
+    }
+</script>

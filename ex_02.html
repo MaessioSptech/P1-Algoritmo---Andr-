@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <!--Nome: André Singillo de Araujo RA:0122037 -->
+    <p>
+        2. Crie um programa em HTML/JS o qual:
+        a) Tenha os botões "Carnes", "Legumes" e "Frutas";
+        b) Ao clicar no 1º, aparece um alert com uma frase que descreva o que você acha sobre carnes 
+        (se acha gostoso, se só come peixe, se não come etc). Em seguida, o título da página deve mudar
+        para "Último clique: Botão de Carnes";
+        c) Ao clicar no 2º, aparece um alert com uma frase que descreva o que você acha sobre legumes 
+        (se acha gostoso, se se não come etc). Em seguida, o título da página deve mudar para 
+        "Último clique: Botão de Legumes";
+        d) Ao clicar no 3º, aparece um alert com uma frase que descreva o que você acha sobre frutas 
+        (se acha gostoso, se não come etc). 
+        Em seguida, o título da página deve mudar para "Último clique: Botão de Frutas".
+    </p>      
+        
+    <div>   
+        <button onclick="carnes()">Carnes</button>
+        <button onclick="legumes()">Legumes</button>
+        <button onclick="frutas()">Frutas</button>
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function carnes() {
+        alert("Carnes são as proteinas mais saborosas, a mais saborosa é a carne vermelha, entretanto, a carne de frango e peixe são muito boas também");
+        document.title = "Carnes são as melhores proteinas"  
+    }
+    function legumes() {
+        alert("O melhor acompanhente para carnes, principalmente a batata Inglesa que podemos fazer um saboroso purê");
+        document.title = "O melhor acompanhante para carnes" 
+    }
+    function frutas() {
+
+        alert("As frutas já doces e saborosas, a melhor sobremesa saudável, são as frutas");
+        document.title = "Sobremesa mais saudável e gostosa" 
+    }
+</script>

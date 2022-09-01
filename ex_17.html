@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 17 diferente</title>
+</head>
+<body>
+        <div>  Valor guardado no cofrinho: R$
+         <b id="div_dinheiro_guardado">0.00</b> 
+        </div>
+        <p>Valor a ser depositado: <input type="number" id="valor_deposito"></p>
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="tirar_grana()">Tirar toda grana</button>
+</body>
+</html>
+
+<script>
+
+    var valor_depositado = 0
+
+    function depositar() {
+    
+        // valor_depositado= valor_deposito + Number(valor_deposito.value)
+        valor_depositado += Number(valor_deposito.value);
+        div_dinheiro_guardado.innerHTML = `${valor_depositado}`
+    };
+
+    
+    function tirar_grana() {
+        valor_depositado = 0;
+        div_dinheiro_guardado.innerHTML = `${valor_depositado}`
+    };
+    
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+</head>
+<body>
+    <p> Informe o primeiro número para progressão :
+        <input type="number" id="input_primeiro_numero_progressao">
+    </p>
+    <p> Informe uma razão(q):
+        <input type="number" id="input_numero_razao">
+    </p>
+    <p> qual o número (termo) da progressão deseja ver:
+        <input type="number" id="input_termo_pedido">
+    </p>
+    
+    <button onclick="calcular_progressao()">Calcular progressão_geometrica</button>
+
+    <div id="div_resposta_progressao">
+    </div>
+    an = a1*q(n-1)
+</body>
+</html>
+
+<script>
+    function calcular_progressao() {
+        
+        var progressão_geometrica = Number(input_primeiro_numero_progressao.value) *
+         Number(input_numero_razao.value) ** (Number(input_termo_pedido.value) - 1);
+
+        div_resposta_progressao.innerHTML = 
+        `O ${Number(input_termo_pedido.value)}º termo nessa PG será ${progressão_geometrica}`
+    }
+</script> 

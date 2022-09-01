@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 15</title>
+</head>
+<body>
+    
+    <p> Informe o valor do carro a vista:
+        <input type="number" id="input_carro_vista">
+    </p>
+    <p> Informe a taxa de juros ao mês:
+        <input type="number" id="input_juros_mês">
+    </p>
+    <p> Informe em quantas vezes irá pagar:
+        <input type="number" id="input_pagamento_mês">
+    </p>
+    <button onclick="calcular_preju()">Calcular prejú</button>
+
+    <div id="div_valores_prejú"></div>
+</body>
+</html> 
+
+<script>
+
+    function calcular_preju() {
+        
+        var P_M = Number(input_pagamento_mês.value)
+        var C_V = Number(input_carro_vista.value)
+        var i = Number(input_juros_mês.value) / 100
+        var calculo_j_composto = C_V*(1+i)** P_M
+        var calculo_total_j_por_carro = calculo_j_composto / C_V
+
+        div_valores_prejú.innerHTML = `
+        Seu carro vai sair por um total de R$${calculo_j_composto.toFixed(2)}.
+         Após 1 mês, ele já vai valer só R$${C_V*0.8.toFixed(2)}. 
+         Porque comprou financiado, vai pagar o correspondente a ${calculo_total_j_por_carro.toFixed(2)} carros;
+
+        `
+    }
+</script>

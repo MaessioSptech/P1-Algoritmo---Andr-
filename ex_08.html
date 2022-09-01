@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+<body>
+    <p>Qual é o Ki do seu guerreiro?
+        <input id="input_KB" type="number"/></p>
+<button onclick="calculo_ssj()">SSJ</button>
+<button onclick="calculo_ssj2()">SSJ2</button>
+<button onclick="calculo_ssj3()">SSJ3</button>
+
+<div id="resultado_Ki">
+</div>
+
+</body>
+</html>
+
+<script>
+    function calculo_ssj() {
+        resultado_Ki.innerHTML = ` Após se transformar em SSJ, o ki desse Sayajin passa a ser de 
+        ${Number(input_KB.value) * 50}
+        `;
+    }
+    function calculo_ssj2() {
+        resultado_Ki.innerHTML = ` Após se transformar em SSJ2, o ki desse Sayajin passa a ser de 
+        ${Number(input_KB.value) * 100}
+        `;
+
+    }
+    function calculo_ssj3() {
+        resultado_Ki.innerHTML = ` Após se transformar em SSJ3, o ki desse Sayajin passa a ser de 
+        ${Number(input_KB.value) * 200}
+        `;
+    }  
+
+
+</script>

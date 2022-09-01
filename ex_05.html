@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concatenasão</title>
+</head>
+<body>
+    <p>Digite um número para ver a tabuada:
+        <input id="input_n" type="number"/></p>
+        <button onclick="tabuada()">Veja a tabuada</button>
+        <div id="resultado_tabuada">
+        
+        </div>
+</body>
+</html>
+
+<script>
+
+    function tabuada(){
+    resultado_tabuada.innerHTML = `
+    ${Number(input_n.value)} x 0 =${Number(input_n.value)*0}<br>
+    ${Number(input_n.value)} x 1=${Number(input_n.value)*1}<br>
+    ${Number(input_n.value)} x 2=${Number(input_n.value)*2}<br>
+    ${Number(input_n.value)} x 3=${Number(input_n.value)*3}<br>
+    ${Number(input_n.value)} x 4=${Number(input_n.value)*4}<br>
+    ${Number(input_n.value)} x 5 =${Number(input_n.value)*5}<br>
+    ${Number(input_n.value)} x 6 =${Number(input_n.value)*6}<br>
+    ${Number(input_n.value)} x 7 =${Number(input_n.value)*7}<br>
+    ${Number(input_n.value)} x 8 =${Number(input_n.value)*8}<br>
+    ${Number(input_n.value)} x 9 =${Number(input_n.value)*9}<br>
+    ${Number(input_n.value)} x 10 =${Number(input_n.value)*10}<br>
+    `
+
+    
+    }
+</script>

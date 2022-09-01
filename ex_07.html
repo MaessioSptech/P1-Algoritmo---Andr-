@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+    <p>Digite o valor da passagem:
+        <input id="input_passagem" type="number"/></p> 
+        <p>Digite a quantidade de viagem:
+            <input id="input_viagem" type="number"/></p>
+            <p>Digite a distância em km do trabalho até sua residência:
+                <input id="input_distancia" type="number"/></p>
+        <button onclick="calculo_vt()">Calcule o gasto do VT</button>
+
+        <div id="resultado_vt">
+
+        </div>
+</body>
+</html>
+
+<script>
+    function calculo_vt() {
+    
+        var gastar = (Number(input_passagem.value) * Number(input_viagem.value) * 0.9) +
+        (Number(input_viagem.value) * Number(input_distancia.value) * 0.1 *0.75 );
+        
+        
+        resultado_vt.innerHTML = `
+        Você vai gastar R$ ${gastar} por mês com transporte.
+        `;
+
+    }
+
+
+</script>

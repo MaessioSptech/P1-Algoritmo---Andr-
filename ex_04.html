@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body> 
+    <!--Nome: André Singillo de Araujo RA:0122037 -->
+   <p>Digite os votos do candidato A:
+    <input id="input_a" type="text"/></p>
+    <p>Digite os votos do candidato B:
+    <input id="input_b" type="text"/></p>
+    <p>Digite os votos brancos:
+    <input id="input_brancos" type="text"/></p>
+    <p>Digite os votos nulos:
+    <input id="input_nulos" type="text"/></p>
+    <div>
+        <button onclick="calculo_votos()">Resultado da Eleição</button>
+    </div>
+    <div id="resultado_calculadora">
+        
+    </div>
+</body>
+</html>
+
+<script>
+    function calculo_votos() {
+        
+        var total = Number(input_a.value) + 
+                    Number(input_b.value) + 
+                    Number(input_brancos.value) + 
+                    Number(input_nulos.value);
+            
+        var porcentagem_a = Number(input_a.value) / total * 100 
+        var porcentagem_b = Number(input_b.value) / total * 100 
+        var porcentagem_brancos = Number(input_brancos.value) / total * 100 
+        var porcentagem_nulos = Number(input_nulos.value) / total * 100 
+        var total_invalidos = Number(input_brancos.value) + Number(input_nulos.value)
+
+        resultado_calculadora.innerHTML = `
+        Total de votos: ${total} votos<br> 
+        Candidato A: ${porcentagem_a}% (${Number(input_a.value)}votos)<br> 
+        Candidato B: ${porcentagem_b}% (${Number(input_b.value)} votos)<br> 
+        Invalidos: ${total_invalidos / total * 100} % 
+        (${total_invalidos} votos)
+        `;
+    }
+   
+</script>

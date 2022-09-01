@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 12</title>
+</head>
+<body>
+    <p> Informe um número :
+        <input type="number" id="input_numero_base">
+    </p>
+    <p> Informe um número :
+        <input type="number" id="input_numero_elevado">
+    </p>
+    <button onclick="calculo_potencia()">Fazer potência</button>
+
+    <div id="div_resposta_potencia"></div>
+</body>
+</html>
+
+<script>
+
+    function calculo_potencia() {
+
+        var resolucao_base_elevado = Number(input_numero_base.value) **
+        Number(input_numero_elevado.value);
+
+        div_resposta_potencia.innerHTML = `
+        ${Number(input_numero_base.value)} elevado a 
+        ${Number(input_numero_elevado.value)} dá 
+        ${resolucao_base_elevado}
+        `;
+    }
+
+</script>

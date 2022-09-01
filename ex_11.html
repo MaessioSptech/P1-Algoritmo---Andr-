@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+    <p>Informe um número
+        <input id="input_numero_informado" type="number"/></p>
+<button onclick="calculo_raiz_quadrada()">Clique e veja a raiz quadrada</button>
+<div id="resolucao_raiz_quadrada">
+</div> <br>
+<button onclick="calculo_raiz_cubica()">Clique e veja a raiz cubica </button>
+<div id="resolucao_raiz_cubica">
+
+</div>
+</body>
+</html>
+
+<script>
+    function calculo_raiz_quadrada () {
+        resolucao_raiz_quadrada.innerHTML = `
+        ${Number(input_numero_informado.value) ** (1/2)}
+        `   
+    }
+
+    function calculo_raiz_cubica () {
+        resolucao_raiz_cubica.innerHTML = `
+        ${Number(input_numero_informado.value) ** (1/3)}
+        `   
+    }
+</script>
